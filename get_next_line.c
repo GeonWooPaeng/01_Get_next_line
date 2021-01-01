@@ -57,7 +57,7 @@ char *ft_make_line(char **arr, int *check)
     }
 }
 
-int	get_next_line2(int fd, char **line)
+int	get_next_line(int fd, char **line)
 {
    	static char *arr[FILE_MAX]; //한 줄 씩 저장하기 위해서만들어 놓은 곳
 	char		buf[BUFFER_SIZE + 1]; //read 읽어오는 곳
@@ -68,6 +68,8 @@ int	get_next_line2(int fd, char **line)
         return (-1);
     while ((nr = read(fd, buf, BUFFER_SIZE)) >= 0)
     {
+        if (nr < 0)
+            return (-1);
         if (ft_make_arr(&arr[fd], buf, nr) || nr == 0)
             break ;
     }
@@ -77,8 +79,6 @@ int	get_next_line2(int fd, char **line)
         arr[fd] = 0;
         return (0);
     }
-    if (nr < 0)
-        return (-1);
     return (1);
 }
 
