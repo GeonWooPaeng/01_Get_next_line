@@ -6,35 +6,34 @@
 /*   By: gpaeng <gpaeng@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/29 14:58:13 by gpaeng            #+#    #+#             */
-/*   Updated: 2020/12/31 17:24:09 by gpaeng           ###   ########.fr       */
+/*   Updated: 2021/01/01 20:54:38 by gpaeng           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <unistd.h>
-#include <fcntl.h>
-#include "get_next_line.h"
+// #include <stdio.h>
+// #include <unistd.h>
+// #include <fcntl.h>
+// #include "get_next_line.h"
 
-
-int main()
-{
-    int		fd;		
-    char	*line;
+// int main()
+// {
+//     int		fd;		
+//     char	*line;
 	
-	if ((fd = open("./test.txt", O_RDONLY)) == -1)
-	{
-		write(1, "Error\n", 6);
-		return (0);
-	}
-	while (get_next_line(fd, &line) > 0)
-	{
-		printf("line >> %s\n", line);
-		free(line);
-	}
-	printf("line22 >> %s\n", line);
-	free(line);
-	return (0);
-}
+// 	if ((fd = open("./test.txt", O_RDONLY)) == -1)
+// 	{
+// 		write(1, "Error\n", 6);
+// 		return (0);
+// 	}
+// 	while (get_next_line(fd, &line) > 0)
+// 	{
+// 		printf("line >> %s\n", line);
+// 		free(line);
+// 	}
+// 	printf("line >> %s\n", line);
+// 	free(line);
+// 	return (0);
+// }
 
 
 // int main()
