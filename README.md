@@ -21,5 +21,6 @@
 <br/>
 
 # 주의
+-  첫 return (-1) 조건 => !line || fd < 0 || BUFFER_SIZE < 1 || fd >= FILE_MAX)
 - static 함수를 이용하여 Buffer_size가 상관없게 한다.
 - 맨 마지막 EOF인 곳은 arr[fd] = NULL로 해줘야 segment fault가 나지 않는다. 
