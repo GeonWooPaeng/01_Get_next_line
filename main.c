@@ -6,7 +6,7 @@
 /*   By: gpaeng <gpaeng@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/29 14:58:13 by gpaeng            #+#    #+#             */
-/*   Updated: 2021/01/01 23:54:19 by gpaeng           ###   ########.fr       */
+/*   Updated: 2021/01/02 22:58:57 by gpaeng           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,19 +19,21 @@ int main()
 {
     int		fd;		
     char	*line;
-	
+	int		ret;
+
 	if ((fd = open("./test.txt", O_RDONLY)) == -1)
 	{
 		write(1, "Error\n", 6);
 		return (0);
 	}
-	while (get_next_line(fd, &line) > 0)
+	while ((ret = get_next_line(fd, &line)) > 0)
 	{
 		printf("line >> %s\n", line);
 		free(line);
 	}
 	printf("line >> %s\n", line);
 	free(line);
+
 	return (0);
 }
 
