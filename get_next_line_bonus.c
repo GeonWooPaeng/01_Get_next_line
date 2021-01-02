@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.c                                    :+:      :+:    :+:   */
+/*   get_next_line_bonus.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gpaeng <gpaeng@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/02 14:43:25 by gpaeng            #+#    #+#             */
-/*   Updated: 2021/01/02 14:51:14 by gpaeng           ###   ########.fr       */
+/*   Created: 2021/01/01 15:09:17 by gpaeng            #+#    #+#             */
+/*   Updated: 2021/01/02 14:50:25 by gpaeng           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "get_next_line_bonus.h"
 
 int		ft_make_arr(char **arr, char *buf, ssize_t nr)
 {
